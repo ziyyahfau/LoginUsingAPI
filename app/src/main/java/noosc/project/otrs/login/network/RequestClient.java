@@ -19,4 +19,11 @@ public class RequestClient {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }
+    public static Retrofit getClientv2() {
+        Gson gson = new GsonBuilder().setLenient().create();
+        return new Retrofit.Builder()
+                .baseUrl(BuildConfig.MAIN_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+    }
 }

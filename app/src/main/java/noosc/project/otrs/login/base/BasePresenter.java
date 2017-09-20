@@ -1,5 +1,6 @@
 package noosc.project.otrs.login.base;
 
+import io.isfaaghyth.rak.Rak;
 import noosc.project.otrs.login.network.RequestClient;
 import noosc.project.otrs.login.network.RouteServices;
 
@@ -9,11 +10,9 @@ import noosc.project.otrs.login.network.RouteServices;
 
 public class BasePresenter<V> {
     public V view;
-    private RouteServices service;
 
     public void attachView(V view) {
         this.view = view;
-        service = RequestClient.getClient().create(RouteServices.class);
     }
 
     public void dettachView() {
@@ -21,7 +20,11 @@ public class BasePresenter<V> {
     }
 
     public RouteServices getService() {
-        return service;
+        return RequestClient.getClient().create(RouteServices.class);
+    }
+
+    public RouteServices getServicev2() {
+        return RequestClient.getClientv2().create(RouteServices.class);
     }
 
 }

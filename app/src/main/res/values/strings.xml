@@ -1,3 +1,125 @@
 <resources>
     <string name="app_name">Login</string>
+
+
+    <!--String Label in Action Bar-->
+
+    <string name="Login_Activity">Login Activity</string>
+    <string name="Account_List">Account List</string>
+    <string name="Account">Account</string>
+    <string name="Queue_Activity">Queue View</string>
+    <string name="Status_Activity">Status View</string>
+    <string name="Escalation_Activity">Escalation View</string>
+    <string name="WatchedTicket_Activity">Watched Ticket View</string>
+    <string name="Responsible_Activity">Responsible View</string>
+    <string name="LockedTicket_Activity">Lock Ticket View</string>
+    <string name="NewTicket">New Ticket</string>
+    <string name="DetailQueue_Ticket">Tickets</string>
+    <string name="TicketOpen">Ticket Open</string>
+    <string name="TicketClosed">Ticket Closed</string>
+    <string name="CreateCloseTicket">Close Ticket</string>
+
+    <!--String Detail Ticket <example>-->
+    <string name="DetailTicket">Detail Ticket</string>
+
+    <!--String Menu Utama-->
+
+    <string name="Companytiket">Company Ticket</string>
+    <string name="MyTiket">My Ticket</string>
+    <string name="Dashboard">Recent Activity</string>
+    <string name="Ticket">Ticket</string>
+    <string name="WatchedTiket">Watched Ticket</string>
+
+
+    <!--String Menu in Action Bar-->
+
+    <string name="Add_Login">Add New Account</string>
+    <string name="Refresh">Refresh</string>
+    <string name="Profile">Profile</string>
+    <string name="Reply">Reply</string>
+    <string name="ProfileUser">User Profile</string>
+    <string name="CloseTicket">Close Ticket</string>
+    <string name="Priority">Priority</string>
+    <string name="Search">Searchable</string>
+    <string name="Logout">Logout</string>
+
+
+    <!--isian pesan tiket-->
+    <string name="HeadTiket">Dear All\n</string>
+    <string name="IsianTiket">Di informasikan bahwa salah satu harddisk (datastore 2) di site Merlion yang tidak terdeteksi  di ESXi. Mohon bantuannya kepada PIC untuk melakukan pengecekan dan perbaikan terhadap insiden terkait\n</string>
+    <string name="FootTiket">Terimakasih\n</string>
+    <string name="Signature">Security Operation Center\nGraha Mandiri\nJl. Imam Bonjol no 61\nJakarta, 10310, Indonesia\nO: +62 123456, +621 77861524\nhttps://support.nossc.co.id"</string>
+
+    <string name="isiFrom">Security Operation Center(soc@noosc.co.id)</string>
+
+    <!--Detail-->
+    <string name="Today">Today</string>
+    <string name="Tommorow">Tommorow</string>
+    <string name="NextWeek">Next Week</string>
+    <string name="Pending">Pending</string>
+    <string name="All">All Ticket</string>
+
+    <string name="NoTicket">100110</string>
+
+    <!--Array string-->
+    <string-array name="TypeTicket">
+        <item>Security Advisory</item>
+        <item>Security Alert</item>
+        <item>SEcurity Insiden</item>
+        <item>Change Request</item>
+        <item>Service Request</item>
+    </string-array>
+
+    <string-array name="FromTicket">
+        <item>HESTIA</item>
+        <item>INTERNAL</item>
+        <item>MERLION</item>
+        <item>MARS</item>
+        <item>AQUILON</item>
+    </string-array>
+
+    <string-array name="StatusTicket">
+        <item>Open</item>
+        <item>Closed successful</item>
+        <item>Closed unsuccessful</item>
+        <item>Pending auto close + </item>
+        <item>Pending auto close - </item>
+        <item>Pending reminder</item>
+    </string-array>
+
+    <string-array name="Priority">
+        <item>1 very low</item>
+        <item>2 low</item>
+        <item>3 normal</item>
+        <item>4 high</item>
+        <item>5 very high</item>
+    </string-array>
+
+    <string-array name="GakTauIsinya">
+        <item>-</item>
+    </string-array>
+
+    <string-array name="NoteType">
+        <item>note-internal</item>
+        <item>note-eksternal</item>
+    </string-array>
+
+    <string-array name="LoginSession">
+        <item>Admin</item>
+        <item>Customer</item>
+    </string-array>
+
+    <string-array name="email_autocomplete">
+        <item>fauziyyah.f@noosc.co.id</item>
+        <item>rika.handayani@noosc.co.id</item>
+        <item>dina.anggraeni@noosc.co.id</item>
+        <item>berbudi.utomo@noosc.co.id</item>
+    </string-array>
+
+    <string-array name="search_actioncar">
+        <item>Open Ticket</item>
+        <item>Close Ticket</item>
+        <item>Pending Ticket</item>
+        <item>New Ticket</item>
+    </string-array>
 </resources>

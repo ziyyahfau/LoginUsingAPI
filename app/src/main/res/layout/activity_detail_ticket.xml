@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:paddingBottom="7dp"
+            android:background="@color/colorGreyShadow">
+
+            <TextView
+                android:id="@+id/textDari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MERLION"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/textJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textDari"
+                android:text="Libur Hari Raya Idul Fitri 1438H"
+                android:maxLength="35"
+                android:textSize="15dp"
+                android:textColor="@color/colorBlack"/>
+
+
+            <TextView
+                android:id="@+id/textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textJudul"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="01d 1h"
+                android:textSize="11dp"
+                android:textColor="@color/colorNudeDark"/>
+
+            <LinearLayout
+                android:id="@+id/linearHead1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_below="@id/textTime">
+
+                <TextView
+                    android:id="@+id/textType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type : "
+                    android:gravity="end"
+                    android:layout_marginLeft="101dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorGreyDark"/>
+
+                <TextView
+                    android:id="@+id/typeIsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Request"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearHead2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_below="@id/linearHead1">
+
+                <TextView
+                    android:id="@+id/textState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State : "
+                    android:gravity="end"
+                    android:layout_marginLeft="100dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorGreyDark"/>
+
+                <TextView
+                    android:id="@+id/stateIsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearHead3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_below="@id/linearHead2">
+
+                <TextView
+                    android:id="@+id/textPriority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Priority : "
+                    android:gravity="end"
+                    android:layout_marginLeft="88dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorGreyDark"/>
+
+                <TextView
+                    android:id="@+id/priorityIsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 normal"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearHead4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_below="@id/linearHead3">
+
+                <TextView
+                    android:id="@+id/textQueue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Queue : "
+                    android:gravity="end"
+                    android:layout_marginLeft="93dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorGreyDark"/>
+
+                <TextView
+                    android:id="@+id/queueIsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MERLION"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearHead5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_below="@id/linearHead4">
+
+                <TextView
+                    android:id="@+id/textOwner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Owner : "
+                    android:gravity="end"
+                    android:layout_marginLeft="93dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorGreyDark"/>
+
+                <TextView
+                    android:id="@+id/ownerIsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="berbudi.utomo"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearHead6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_below="@id/linearHead5">
+
+                <TextView
+                    android:id="@+id/textResponsible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Responsible : "
+                    android:gravity="end"
+                    android:layout_marginLeft="57dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorGreyDark"/>
+
+                <TextView
+                    android:id="@+id/responsibleIsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="root@loacalhost"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        //isi ticket
+        <LinearLayout
+            android:id="@+id/isi_tiket_detail"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGreyFlwless">
+
+            <RelativeLayout
+                android:id="@+id/contentTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From "
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/isiFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="62dp"
+                    android:text="@string/isiFrom"
+                    android:textSize="13dp"
+                    android:maxLength="45"/>
+
+                <TextView
+                    android:id="@+id/textTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To "
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/textFrom"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/isiTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/isiFrom"
+                    android:layout_marginLeft="63dp"
+                    android:textSize="13dp"
+                    android:text="berbudi.utomo@noosc.co.id"
+                    android:textColor="@color/colorBlueFlawless"
+                    android:maxLength="45"/>
+
+                <TextView
+                    android:id="@+id/textCc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cc "
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:layout_below="@+id/textTo"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/isiCc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/isiTo"
+                    android:layout_marginLeft="63dp"
+                    android:textSize="13dp"
+                    android:text="miftahudin.luthfi@noosc.co.id"
+                    android:textColor="@color/colorBlueFlawless"
+                    android:maxLength="45"/>
+
+                <TextView
+                    android:id="@+id/textSubjk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject "
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:layout_below="@+id/textCc"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/isiSbjk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/isiCc"
+                    android:layout_marginLeft="63dp"
+                    android:textSize="13dp"
+                    android:text="[Ticket#100110]Merlion-Problem Harddisk Tidak Terdeteksi" />
+
+                <TextView
+                    android:id="@+id/textCreated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created "
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/isiCrreated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/isiSbjk"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="63dp"
+                    android:textSize="13dp"
+                    android:text="18/07/2017 15:38:07"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/isiTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/HeadTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="@string/HeadTiket"/>
+
+                <TextView
+                    android:id="@+id/IsisanTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="@string/IsianTiket"/>
+
+                <TextView
+                    android:id="@+id/FootTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="@string/FootTiket"/>
+
+                <TextView
+                    android:id="@+id/SignaureTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13dp"
+                    android:text="@string/Signature"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@color/colorGreyShadow"
+            android:text="Reply"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editReply"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reply here..."
+                android:textSize="15dp"
+                android:inputType="textMultiLine"
+                android:gravity="top|left"
+                android:lines="5"
+                android:background="@null"
+                android:scrollbars="vertical"
+                android:maxLines="10"/>
+
+            <Button
+                android:id="@+id/buttonReply"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:text="Reply"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:textColor="@color/green"
+                android:layout_marginLeft="280dp"
+                android:background="@null"
+                android:onClick="ButtonReply"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listReply"
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:scrollbarSize="3dp"
+            android:scrollbars="vertical"
+            android:scrollingCache="true"
+            android:smoothScrollbar="true"
+            android:divider="@null"
+            android:background="@color/colorGreyFlwless"
+            android:layout_weight="25">
+        </ListView>
+    </LinearLayout>
+
+</ScrollView>

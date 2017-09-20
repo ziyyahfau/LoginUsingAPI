@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="2"
+        android:title="@string/Profile"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="2"
+        android:title="@string/Refresh"
+        android:icon="@drawable/ic_refresh"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+</menu>

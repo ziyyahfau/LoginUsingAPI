@@ -1,6 +1,7 @@
 package noosc.project.otrs.login.core.login;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.EditText;
 
@@ -59,14 +60,30 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     public void onSuccess(LoginModel result) {
-        if (result.getStatus().equals("true")) {
-            Rak.entry("login", true);
-            Rak.entry("username", result.getUsername());
-            gotoMain();
-        } else {
-            showAlert(result.getMessage());
+        if (Rak.grab("role").equals("admin")){
+            if (result.getStatus().equals("true")) {
+                Rak.entry("login", true);
+                Rak.entry("username", result.getUsername());
+                Rak.entry("type", "admin");
+                gotoMain();
+            } else {
+                showAlert(result.getMessage());
+            }
+        } else if (Rak.grab("role").equals("customer")){
+            if (result.getStatus().equals("true")) {
+                Rak.entry("login", true);
+                Rak.entry("username", result.getUsername());
+                Rak.entry("name_company", result.getName_company());
+                Rak.entry("email", result.getEmail());
+                Rak.entry("type", result.getType());
+                gotoMain();
+            }
+            else {
+                showAlert(result.getMessage());
+            }
         }
     }
+
 
     @Override
     public void onError(String message) {

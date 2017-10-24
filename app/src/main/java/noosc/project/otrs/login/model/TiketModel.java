@@ -14,6 +14,24 @@ public class TiketModel {
     private String customer;
     private String tn;
     private String user;
+    private String ticket_type;
+    private String priority;
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public String getTicket_type() {
+        return ticket_type;
+    }
+
+    public void setTicket_type(String ticket_type) {
+        this.ticket_type = ticket_type;
+    }
 
     public String getQueue() {
         return queue;

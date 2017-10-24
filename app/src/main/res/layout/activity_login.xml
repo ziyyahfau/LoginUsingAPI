@@ -54,6 +54,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:hint="Email"
+                android:maxLines="1"
                 android:fontFamily="sans-serif-condensed"
                 android:background="@null"/>
 
@@ -94,6 +95,7 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:hint="Password"
+                android:maxLines="1"
                 android:password="true"
                 android:fontFamily="sans-serif-condensed"
                 android:background="@null"/>

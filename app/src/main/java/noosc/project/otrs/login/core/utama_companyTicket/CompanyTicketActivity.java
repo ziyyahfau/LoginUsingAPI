@@ -5,7 +5,9 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +19,8 @@ import butterknife.OnClick;
 import noosc.project.otrs.login.R;
 import noosc.project.otrs.login.base.BaseActivity;
 import noosc.project.otrs.login.core.new_ticket.NewTicketActivity;
+import noosc.project.otrs.login.core.utama_companyTicket.AdapterCompany.AdapterCompanyTicket;
+import noosc.project.otrs.login.core.utama_dashboard.DashboardActivity;
 
 
 /**
@@ -25,11 +29,8 @@ import noosc.project.otrs.login.core.new_ticket.NewTicketActivity;
 
 public class CompanyTicketActivity extends BaseActivity<CompanyTicketPresenter> implements CompanyTicketView {
 
-    @BindView(R.id.fab) FloatingActionButton fab;
-    @BindView(R.id.card_view1) CardView cardView1;
-    @BindView(R.id.card_view2) CardView cardView2;
-    @BindView(R.id.card_view3) CardView cardView3;
-    @BindView(R.id.card_view4) CardView cardView4;
+    @BindView(R.id.lst_company_ticket) RecyclerView recyclerViewCompany;
+    @BindView(R.id.fab) FloatingActionButton floatingActionButton;
 
     @Override
     protected CompanyTicketPresenter createPresenter() {
@@ -52,34 +53,20 @@ public class CompanyTicketActivity extends BaseActivity<CompanyTicketPresenter> 
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+
+
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 1, LinearLayoutManager.VERTICAL, false);
+        recyclerViewCompany.setLayoutManager(layoutManager);
+
+        AdapterCompanyTicket adapterCompanyTicket = new AdapterCompanyTicket();
+        recyclerViewCompany.setAdapter(adapterCompanyTicket);
     }
 
 
     @OnClick(R.id.fab)
-    public void ButtonNewTicket(View v) {
+    public void fabButton(View v) {
         startActivity(new Intent(this, NewTicketActivity.class));
     }
-
-    @OnClick(R.id.card_view1)
-    public void ButtonBoreas(View v) {
-        //startActivity(new Intent(this, NewTicketActivity.class));
-    }
-
-    @OnClick(R.id.card_view2)
-    public void ButtonHestia(View v) {
-        //startActivity(new Intent(this, NewTicketActivity.class));
-    }
-
-    @OnClick(R.id.card_view3)
-    public void ButtonMars(View v) {
-        //startActivity(new Intent(this, NewTicketActivity.class));
-    }
-
-    @OnClick(R.id.card_view4)
-    public void ButtonRaw(View v) {
-        //startActivity(new Intent(this, NewTicketActivity.class));
-    }
-
 
     /**
      * Menu Inflater untuk show icon refresh

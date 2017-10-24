@@ -26,7 +26,8 @@
             android:name=".core.login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".core.main.MainActivity"/>
+        <activity android:name=".core.main.MainActivity"
+            android:launchMode="singleTop"/>
         <activity android:name=".core.profile.ProfileActivity"/>
         <activity android:name=".core.utama_dashboard.DashboardActivity"/>
         <activity android:name=".core.utama_companyTicket.CompanyTicketActivity"/>
@@ -34,6 +35,7 @@
         <activity android:name=".core.utama_ticket.TicketActivity"/>
         <activity android:name=".core.utama_watchedTicket.WatchedTicketActivity"/>
         <activity android:name=".core.new_ticket.NewTicketActivity"/>
+        <activity android:name=".core.detail_tiket.DetailTiketActivity"/>
     </application>
 
 </manifest>

@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
+    <requestFocus></requestFocus>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -16,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:paddingBottom="7dp"
+            android:focusable="true"
             android:background="@color/colorGreyShadow">
 
             <TextView
@@ -24,28 +27,17 @@
                 android:layout_height="wrap_content"
                 android:text="MERLION"
                 android:layout_marginTop="5dp"
-                android:layout_centerHorizontal="true"
                 android:textColor="@color/colorBlack"
-                android:textSize="22dp"/>
-
-            <TextView
-                android:id="@+id/textJudul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:textSize="22dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textDari"
-                android:text="Libur Hari Raya Idul Fitri 1438H"
-                android:maxLength="35"
-                android:textSize="15dp"
-                android:textColor="@color/colorBlack"/>
+                android:layout_alignEnd="@+id/linearHead2" />
 
 
             <TextView
                 android:id="@+id/textTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textJudul"
+                android:layout_below="@+id/textTitle"
                 android:layout_marginTop="5dp"
                 android:layout_centerHorizontal="true"
                 android:text="01d 1h"
@@ -197,34 +189,17 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linearHead6"
+
+            <TextView
+                android:id="@+id/textTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:layout_below="@id/linearHead5">
-
-                <TextView
-                    android:id="@+id/textResponsible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Responsible : "
-                    android:gravity="end"
-                    android:layout_marginLeft="57dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:textColor="@color/colorGreyDark"/>
-
-                <TextView
-                    android:id="@+id/responsibleIsi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="root@loacalhost"
-                    android:textColor="@color/colorBlack"/>
-
-            </LinearLayout>
+                android:text="Libur Hari Raya Idul Fitri 1438H dan dan dan dan dan dna dan dan dna dan dandan adn dand "
+                android:textSize="15dp"
+                android:padding="3dp"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@+id/textDari"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 
@@ -313,15 +288,6 @@
                     android:textColor="@color/colorBlack"/>
 
                 <TextView
-                    android:id="@+id/isiSbjk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/isiCc"
-                    android:layout_marginLeft="63dp"
-                    android:textSize="13dp"
-                    android:text="[Ticket#100110]Merlion-Problem Harddisk Tidak Terdeteksi" />
-
-                <TextView
                     android:id="@+id/textCreated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -342,6 +308,16 @@
                     android:textSize="13dp"
                     android:text="18/07/2017 15:38:07"/>
 
+                <TextView
+                    android:id="@+id/isiSbjk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="63dp"
+                    android:textSize="13dp"
+                    android:text="[Ticket#100110]Merlion-Problem Harddisk Tidak Terdeteksi"
+                    android:layout_below="@+id/isiCc"
+                    android:layout_alignParentEnd="true" />
+
 
             </RelativeLayout>
 
@@ -350,36 +326,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:background="@color/colorWhite">
 
                 <TextView
-                    android:id="@+id/HeadTicket"
+                    android:id="@+id/bodyTiket"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="13dp"
+                    android:textColor="@android:color/black"
                     android:text="@string/HeadTiket"/>
-
-                <TextView
-                    android:id="@+id/IsisanTicket"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="@string/IsianTiket"/>
-
-                <TextView
-                    android:id="@+id/FootTicket"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:text="@string/FootTiket"/>
-
-                <TextView
-                    android:id="@+id/SignaureTicket"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:textSize="13dp"
-                    android:text="@string/Signature"/>
 
             </LinearLayout>
 
@@ -410,6 +366,7 @@
                 android:inputType="textMultiLine"
                 android:gravity="top|left"
                 android:lines="5"
+                android:focusable="false"
                 android:background="@null"
                 android:scrollbars="vertical"
                 android:maxLines="10"/>

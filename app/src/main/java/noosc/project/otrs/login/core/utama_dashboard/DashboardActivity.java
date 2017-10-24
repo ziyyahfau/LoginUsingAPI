@@ -5,7 +5,11 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,9 +17,14 @@ import android.view.View;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import io.isfaaghyth.rak.Rak;
 import noosc.project.otrs.login.R;
+import noosc.project.otrs.login.adapter.DashboardAdapter;
+import noosc.project.otrs.login.adapter.TiketAdapter;
 import noosc.project.otrs.login.base.BaseActivity;
 import noosc.project.otrs.login.core.new_ticket.NewTicketActivity;
+import noosc.project.otrs.login.model.AdminTiketModel;
+import noosc.project.otrs.login.model.CustomerTiketModel;
 
 /**
  * Created by Fauziyyah Faturahma on 9/5/2017.
@@ -23,8 +32,12 @@ import noosc.project.otrs.login.core.new_ticket.NewTicketActivity;
 
 public class DashboardActivity extends BaseActivity<DashboardPresenter> implements DashboardView {
 
+    @BindView(R.id.lstDashboard) RecyclerView lstDashboard;
+    @BindView(R.id.cardRecent) CardView cardRecent;
 
-    @BindView(R.id.fab) FloatingActionButton fab;
+    public DashboardActivity() {
+        //
+    }
 
     @Override
     protected DashboardPresenter createPresenter() {
@@ -48,12 +61,22 @@ public class DashboardActivity extends BaseActivity<DashboardPresenter> implemen
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+
+        lstDashboard.setLayoutManager(new LinearLayoutManager(this));
+        if (Rak.isExist("type")) {
+            if (Rak.grab("type").equals("admin")) {
+                Log.d("TAG", "admin");
+                presenter.getDashboardAdmin();//admin
+            } else {
+                Log.d("TAG", "cust");
+                presenter.getDashboardCust();//cust
+
+                //TODO 3
+                //presenter.getOpenTiketCust(Rak.grab("type"));//cust
+            }
+        }
     }
 
-    @OnClick(R.id.fab)
-    public void ButtonNewTicket(View v) {
-        startActivity(new Intent(this, NewTicketActivity.class));
-    }
 
     /**
      * Menu Inflater untuk show icon refresh
@@ -79,4 +102,21 @@ public class DashboardActivity extends BaseActivity<DashboardPresenter> implemen
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onSuccessCust(CustomerTiketModel result) {
+        //cust
+        lstDashboard.setAdapter(new DashboardAdapter(result.getDashboardCust()));
+    }
+
+    @Override
+    public void onSuccessAdmin(AdminTiketModel result) {
+        //admin
+        lstDashboard.setAdapter(new DashboardAdapter(result.getDashboardAll()));
+
+    }
+
+    @Override
+    public void onError(String message) {
+
+    }
 }

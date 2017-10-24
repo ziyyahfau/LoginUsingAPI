@@ -34,8 +34,8 @@ public class CloseTiketPresenter extends BasePresenter<CloseTiketView> {
     }
 
 
-    void getClosedTiketCust() {
-        getServicev2().getTiketOpenCust().enqueue(new Callback<CustomerTiketModel>() {
+    void getClosedTiketCust(String name) {
+        getServicev2().getTiketCloseCust(name).enqueue(new Callback<CustomerTiketModel>() {
             @Override
             public void onResponse(Call<CustomerTiketModel> call, Response<CustomerTiketModel> response) {
                 if (response.isSuccessful()) {

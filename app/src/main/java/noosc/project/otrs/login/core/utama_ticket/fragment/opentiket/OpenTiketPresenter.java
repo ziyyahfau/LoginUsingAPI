@@ -1,11 +1,8 @@
 package noosc.project.otrs.login.core.utama_ticket.fragment.opentiket;
 
-import android.util.Log;
-
 import noosc.project.otrs.login.base.BasePresenter;
 import noosc.project.otrs.login.model.AdminTiketModel;
 import noosc.project.otrs.login.model.CustomerTiketModel;
-import noosc.project.otrs.login.model.TiketModel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,6 +25,7 @@ public class OpenTiketPresenter extends BasePresenter<OpenTIcketView> {
                     view.onSuccessAdmin(response.body());
                 }
             }
+
             @Override
             public void onFailure(Call<AdminTiketModel> call, Throwable t) {
                 view.onError(t.getMessage());
@@ -36,14 +34,15 @@ public class OpenTiketPresenter extends BasePresenter<OpenTIcketView> {
     }
 
 
-    void getOpenTiketCust() {
-        getServicev2().getTiketOpenCust().enqueue(new Callback<CustomerTiketModel>() {
+    void getOpenTiketCust(String name) {
+        getServicev2().getTiketOpenCust(name).enqueue(new Callback<CustomerTiketModel>() {
             @Override
             public void onResponse(Call<CustomerTiketModel> call, Response<CustomerTiketModel> response) {
                 if (response.isSuccessful()) {
                     view.onSuccessCust(response.body());
                 }
             }
+
             @Override
             public void onFailure(Call<CustomerTiketModel> call, Throwable t) {
                 view.onError(t.getMessage());

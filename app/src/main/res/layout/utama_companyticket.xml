@@ -1,254 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="20dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linear1"
-        android:layout_marginTop="30dp"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view1"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:elevation="3dp"
-            android:clickable="true"
-            android:onClick="NextBoreas"
-            card_view:cardBackgroundColor="@color/colorWhite"
-            card_view:cardCornerRadius="5dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:id="@+id/textClient1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/cardClient1"
-                    android:text="Boreas"
-                    android:textSize="17dp"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginLeft="15dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:layout_marginTop="15dp"/>
-
-                <ImageView
-                    android:id="@+id/btn_next1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/button_next"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@+id/cardClient1"
-                    android:layout_marginLeft="240dp"/>
-
-                <ImageView
-                    android:id="@+id/cardClient1"
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/folder"
-                    android:background="#fff"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="21dp" />
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view2"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:elevation="3dp"
-            android:clickable="true"
-            android:onClick="NextHestia"
-            card_view:cardBackgroundColor="@color/colorWhite"
-            card_view:cardCornerRadius="5dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/cardClient2"
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/folder"
-                    android:background="#fff"/>
-
-                <TextView
-                    android:id="@+id/textClient2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/cardClient2"
-                    android:text="Hestia"
-                    android:textSize="17dp"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginLeft="15dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:layout_marginTop="15dp"/>
-
-                <ImageView
-                    android:id="@+id/btn_next2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/button_next"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@+id/cardClient2"
-                    android:layout_marginLeft="240dp"/>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view3"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:elevation="3dp"
-            android:clickable="true"
-            android:onClick="NextMars"
-            card_view:cardBackgroundColor="@color/colorWhite"
-            card_view:cardCornerRadius="5dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/cardClient3"
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/folder"
-                    android:background="#fff"/>
-
-                <TextView
-                    android:id="@+id/textClient3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/cardClient3"
-                    android:text="Mars"
-                    android:textSize="17dp"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginLeft="15dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:layout_marginTop="15dp"/>
-
-                <ImageView
-                    android:id="@+id/btn_next3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/button_next"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@+id/cardClient3"
-                    android:layout_marginLeft="240dp"/>
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view4"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="3dp"
-            android:clickable="true"
-            android:onClick="NextRaw"
-            card_view:cardBackgroundColor="@color/colorWhite"
-            card_view:cardCornerRadius="5dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/cardClient4"
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:src="@drawable/folder"
-                    android:background="#fff"/>
-
-                <TextView
-                    android:id="@+id/textClient4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/cardClient4"
-                    android:text="Raw"
-                    android:textSize="17dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"/>
-
-                <ImageView
-                    android:id="@+id/btn_next4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/button_next"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@+id/cardClient4"
-                    android:layout_marginLeft="240dp"/>
-
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true">
+        android:padding="10dp">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lst_company_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/pencil"
             app:borderWidth="0dp"
             app:backgroundTint="@color/colorAccent"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"/>
-    </RelativeLayout>
 
-</RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

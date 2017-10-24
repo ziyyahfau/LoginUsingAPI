@@ -54,7 +54,8 @@ public class CloseTiketFragment extends BaseFragment<CloseTiketPresenter> implem
                 presenter.getClosedTiket();//admin
             } else {
                 Log.d("TAG", "cust");
-                presenter.getClosedTiketCust();//cust
+                String typeUser = "'" + Rak.grab("type").toString() + "'";
+                presenter.getClosedTiketCust(typeUser);//cust
 
                 //TODO 3
                 //presenter.getOpenTiketCust(Rak.grab("type"));//cust
@@ -64,7 +65,7 @@ public class CloseTiketFragment extends BaseFragment<CloseTiketPresenter> implem
 
     @Override
     public void onSuccessCust(CustomerTiketModel result) { //cust
-        lstClosedTiket.setAdapter(new TiketAdapter(result.getClosed_ticket()));
+        lstClosedTiket.setAdapter(new TiketAdapter(result.getMyCust_closed()));
     }
 
     @Override

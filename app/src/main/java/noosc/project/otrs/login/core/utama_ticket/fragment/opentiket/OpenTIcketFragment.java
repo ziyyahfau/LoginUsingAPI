@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import io.isfaaghyth.rak.Rak;
@@ -27,6 +29,8 @@ import noosc.project.otrs.login.model.TiketModel;
 public class OpenTIcketFragment extends BaseFragment<OpenTiketPresenter> implements OpenTIcketView {
 
     @BindView(R.id.lst_open_tiket) RecyclerView lstOpenTiket;
+    @BindView(R.id.txt_error_message) TextView txtErrorMessage;
+    @BindView(R.id.layout_error) RelativeLayout layoutError;
 
     public OpenTIcketFragment() {
     }
@@ -53,7 +57,8 @@ public class OpenTIcketFragment extends BaseFragment<OpenTiketPresenter> impleme
                 presenter.getOpenTiket();//admin
             } else {
                 Log.d("TAG", "cust");
-                presenter.getOpenTiketCust();//cust
+                String typeUser = "'" + Rak.grab("type").toString() + "'";
+                presenter.getOpenTiketCust(typeUser);//cust
 
                 //TODO 3
                 //presenter.getOpenTiketCust(Rak.grab("type"));//cust
@@ -63,7 +68,12 @@ public class OpenTIcketFragment extends BaseFragment<OpenTiketPresenter> impleme
 
     @Override
     public void onSuccessCust(CustomerTiketModel result) { //cust
-        lstOpenTiket.setAdapter(new TiketAdapter(result.getOpen_ticket()));
+        if (!result.getMyCust_open().isEmpty()) {
+            lstOpenTiket.setAdapter(new TiketAdapter(result.getMyCust_open()));
+        } else {
+            layoutError.setVisibility(View.VISIBLE);
+            txtErrorMessage.setText("Data tidak ada.");
+        }
     }
 
     @Override
@@ -73,6 +83,8 @@ public class OpenTIcketFragment extends BaseFragment<OpenTiketPresenter> impleme
 
     @Override
     public void onError(String message) {
+        layoutError.setVisibility(View.VISIBLE);
+        txtErrorMessage.setText("Pastikan internet anda berjalan dengan baik.");
         new AlertDialog.Builder(getContext())
                 .setTitle(getString(R.string.app_name))
                 .setMessage(message)

@@ -12,8 +12,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "BASE_URL", "your_api")
-        buildConfigField("String", "BASE_URL", "\"http://192.168.13.190:80\"")
-        buildConfigField("String", "MAIN_URL", "\"http://192.168.13.190:81\"")
+        buildConfigField("String", "BASE_URL", "your_api")
+        buildConfigField("String", "MAIN_URL", "your_api")
 
     }
     buildTypes {
